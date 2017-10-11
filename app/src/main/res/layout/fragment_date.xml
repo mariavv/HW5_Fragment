@@ -1,16 +1,19 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.itplace.maria.hw5_fragment.DateFragment">
+    tools:context="com.itplace.maria.hw5_fragment.DateFragment"
+    android:background="@android:color/holo_green_light">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/tvDate"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="@dimen/TimeSize"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/DateSize"
          />
 
-</FrameLayout>
+</RelativeLayout>

@@ -15,14 +15,13 @@ import java.util.Random;
 
 
 public class ImageFragment extends Fragment {
-    static final String ARG_IMAGE = "arg_image";
 
-    int pageNumber;
+    static final String ARG_PAGE_IMAGE = "arg_page_image";
 
     static ImageFragment newInstance(int page) {
         ImageFragment pageFragment = new ImageFragment();
         Bundle arguments = new Bundle();
-        arguments.putInt(ARG_IMAGE, page);
+        arguments.putInt(ARG_PAGE_IMAGE, page);
         pageFragment.setArguments(arguments);
         return pageFragment;
     }
@@ -30,17 +29,12 @@ public class ImageFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pageNumber = getArguments().getInt(ARG_IMAGE);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_image, null);
-
-        TextView tvPage = (TextView) view.findViewById(R.id.textView);
-
-
         return view;
     }
 }
